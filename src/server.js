@@ -25,4 +25,6 @@ server.post('/save-orphanage', pages.saveOrphanage);
 server.delete('/remove-orphanage', pages.removeOrphanage);
 server.get('/get-orphanages', pages.getOrphanages);
 
-server.listen(5500);
+const port = process.env.PORT || 5500;
+
+server.listen(port, '0.0.0.0');
