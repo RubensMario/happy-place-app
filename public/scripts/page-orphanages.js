@@ -19,8 +19,8 @@ function addMarker({ id, name, lat, lng }) {
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240,
-    // o path é /orphange... pq a página é renderizada pelo servidor
-    // que acessa as páginas na pasta view e serve a partir da URL raiz "/"
+    /* o path é /orphange... pq a página é renderizada pelo servidor
+     que acessa as páginas na pasta view e serve a partir da URL raiz "/" */
   }).setContent(
     `${name} <a href="/orphanage?id=${id}"><img src="/images/arrow-white.svg" ></a>`
   );

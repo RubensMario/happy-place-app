@@ -1,8 +1,8 @@
 const Database = require('sqlite-async');
 
 // Função para criar tabela (e modelo dos dados) no arquivo aberto com open
-// db é o próprio banco de dados criado com open
-// que fica armazenado na aplicação (database.sqlite)
+/* db é o próprio banco de dados criado com open
+ que fica armazenado na aplicação (database.sqlite) */
 function execute(db) {
   return db.exec(`
   CREATE TABLE IF NOT EXISTS orphanages (

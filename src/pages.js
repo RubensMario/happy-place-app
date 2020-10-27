@@ -9,8 +9,8 @@ module.exports = {
   },
 
   async orphanage(req, res) {
-    // O id passado como query é obtido em page-orphanages dos span hidden
-    // que, por sua vez, são alimentados pela rota de orphanage, abaixo desta
+    /* O id passado como query é obtido em page-orphanages dos span hidden
+     que, por sua vez, são alimentados pela rota de orphanage, abaixo desta */
     const id = req.query.id;
 
     try {
