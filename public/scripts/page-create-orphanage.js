@@ -12,46 +12,46 @@ const icon = L.icon({
 
 let marker;
 
-// criar e adicionar marcador
+// Cria e adiciona marcador
 map.on('click', (event) => {
   const lat = event.latlng.lat;
   const lng = event.latlng.lng;
 
-  // atribui valor lat ao elemento com atributo name=lat
+  // Atribuir valor lat ao elemento com atributo name=lat
   document.querySelector('[name=lat]').value = lat;
-  // atribui valor lng ao elemento com atributo name=lng
+  // Atribuir valor lng ao elemento com atributo name=lng
   document.querySelector('[name=lng]').value = lng;
 
-  // remover ícone
+  // Remover ícone
   marker && map.removeLayer(marker);
 
-  // add camada do ícone
+  // Add camada do ícone
   marker = L.marker([lat, lng], { icon }).addTo(map);
 });
 
-// adicionar novo campo de fotos
+// Adiciona novo campo de fotos
 function addPhotoField() {
-  // pegar container de fotos #images
+  // Pegar container de fotos #images
   const container = document.querySelector('#images');
 
-  // pegar o container para duplicar .new-upload
+  // Pegar o container para duplicar .new-upload
   const fieldsContainer = document.querySelectorAll('.new-upload');
 
-  // realizar a duplição da última imagem add
+  // Realizar a duplição da última imagem add
   const newFieldContainer = fieldsContainer[
     fieldsContainer.length - 1
   ].cloneNode(true);
 
-  // verificar se o campo está vazio, se sim, não add ao container de imagens
+  // Verificar se o campo está vazio, se sim, não add ao container de imagens
   // ou seja, não abrir novo input de imagem
   const input = newFieldContainer.children[0];
 
   if (input.value == '') return;
 
-  // limpar o campo antes de add ao container de imagens
+  // Limpar o campo antes de add ao container de imagens
   newFieldContainer.children[0].value = '';
 
-  // add duplicata ao container de #images
+  // Add duplicata ao container de #images
   container.appendChild(newFieldContainer);
 }
 
@@ -60,31 +60,31 @@ function deleteField(event) {
 
   const fieldsContainer = document.querySelectorAll('.new-upload');
 
-  // havendo somente um campo, o botão x irá limpar o campo
+  // Havendo somente um campo, o botão x irá limpar o campo
   if (fieldsContainer.length < 2) {
     span.parentNode.children[0].value = '';
     return;
   }
 
-  // havendo ao menos 2 campos, o botão x irá deletar o campo correspondente
+  // Havendo ao menos 2 campos, o botão x irá deletar o campo correspondente
   span.parentNode.remove();
 }
 
 function toggleSelect(event) {
-  // retirar a classe active dos botões
+  // Retirar a classe active dos botões
   document
     .querySelectorAll('.button-select button')
     .forEach((button) => button.classList.remove('active'));
 
-  // pegar o botão clicado
+  // Pegar o botão clicado
   const button = event.currentTarget;
-  // colocar a classe active
+  // Colocar a classe active
   button.classList.add('active');
 
-  // atualizar o input hidden com o valor selecionado
+  // Atualizar o input hidden com o valor selecionado
   const input = document.querySelector('[name="open_on_weekends"]');
 
-  // atribuir ao input (como value) o dado registrado no atributo data
+  // Atribuir ao input (como value) o dado registrado no atributo data
   input.value = button.dataset.value;
 }
 
