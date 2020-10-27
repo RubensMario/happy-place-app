@@ -37,7 +37,7 @@ Database.then(async (db) => {
     const selectedOrphanages = await db.all('SELECT * FROM orphanages');
     console.log(selectedOrphanages);
 
-    // Consultar um estabelecimento pelo iid
+    // Consultar um estabelecimento pelo id
     // const orphanage = await db.all('SELECT * FROM orphanages WHERE id = "2"');
 
 
