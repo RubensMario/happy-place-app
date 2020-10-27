@@ -21,5 +21,8 @@ server.get('/orphanage', pages.orphanage);
 server.get('/orphanages', pages.orphanages);
 server.get('/create-orphanage', pages.createOrphanage);
 server.post('/save-orphanage', pages.saveOrphanage);
+// acesso via insomnia
+server.delete('/remove-orphanage', pages.removeOrphanage);
+server.get('/get-orphanages', pages.getOrphanages);
 
 server.listen(5500);

@@ -45,7 +45,7 @@
         <div class="images">
           {{#each orphanage.images}}
           <button onclick="selectImage(event)" class="active" type="button">
-            <img src="{{this}}" alt=" Lar das meninas" />
+            <img src="{{this}}" alt="Lar das meninas" />
           </button>
           {{/each}}
 
@@ -55,8 +55,11 @@
           <h1>{{orphanage.name}}</h1>
 
           <p>
-            {{orphanage.about}}
+            <a target="_blank" href="https://www.instagram.com/{{orphanage.instagram}}">@{{orphanage.instagram}}</a>
           </p>
+
+          <p>
+            {{orphanage.about}} </p>
 
           <div class="map-container">
             <div id="mapid"></div>
@@ -93,12 +96,13 @@
             </div>
             {{/if }}
           </div>
-
+          {{#if orphanage.whatsapp }}
           <a target="_blank" href="https://api.whatsapp.com/send?l=pt_BR&phone={{orphanage.whatsapp}}"
             class="primary-button" type="button">
             <img src="/images/whatsapp.svg" alt="Chamar no whatsapp" />
             Entrar em contato
           </a>
+          {{/if}}
         </div>
       </div>
     </main>

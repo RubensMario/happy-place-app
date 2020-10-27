@@ -1,5 +1,4 @@
-/* Longitude e latitude de Maceió (para mostrar regiões com orfanatos):
--9.5985924,-35.7592344 */
+// Longitude e latitude
 const map = L.map('mapid').setView([-9.5985924, -35.7592344], 12.4);
 
 // Add imagem do mapa

@@ -38,6 +38,14 @@ module.exports = {
     }
   },
 
+  async getOrphanages(req, res) {
+    const db = await Database;
+
+    const selectedOrphanages = await db.all('SELECT * FROM orphanages');
+
+    return res.send(selectedOrphanages);
+  },
+
   // res.render('página',{dados_para_página})
   async orphanages(req, res) {
     try {
@@ -71,6 +79,7 @@ module.exports = {
         name: fields.name,
         about: fields.about,
         whatsapp: fields.whatsapp,
+        instagram: fields.instagram,
         images: fields.images.toString(),
         instructions: fields.instructions,
         opening_hours: fields.opening_hours,
@@ -82,6 +91,19 @@ module.exports = {
     } catch (error) {
       console.log(error);
       res.send('Erro no banco de dados!');
+    }
+  },
+
+  async removeOrphanage(req, res) {
+    const id = req.query.id;
+    try {
+      const db = await Database;
+
+      await db.run(`DELETE FROM orphanages WHERE id= "${id}" `);
+
+      return res.send(`id ${id} excluído`);
+    } catch (error) {
+      res.send('Erro ao excluir');
     }
   },
 };

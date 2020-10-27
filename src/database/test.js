@@ -17,6 +17,7 @@ Database.then(async (db) => {
   //     about:
   //       ' Presta assistência a crianças de 06 a 15 anos que se encontrem em situação de risco ou vulnerabilidade social.',
   //     whatsapp: '82988881111',
+  //     instagram: 'instagram.com/lardosmeninos'
   //     images: [
   //       'https://images.unsplash.com/photo-1595009545055-d5ec0bb8d732?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
   //       'https://images.unsplash.com/photo-1563465814437-b1a057a461ed?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
@@ -36,7 +37,7 @@ Database.then(async (db) => {
     const selectedOrphanages = await db.all('SELECT * FROM orphanages');
     console.log(selectedOrphanages);
 
-    // Consultar um orfanato pelo id
+    // Consultar um estabelecimento pelo id
     // const orphanage = await db.all('SELECT * FROM orphanages WHERE id = "2"');
 
 

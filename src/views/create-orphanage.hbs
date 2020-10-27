@@ -64,12 +64,18 @@
 
           <div class="input-block">
             <label for="about">Endereço por escrito <span>(máximo de 300 caracteres)</span></label>
-            <textarea id="about" name="about" required></textarea>
+            <textarea id="about" name="about" placeholder="Rua, nº, bairro, ponto de referência, ..."
+              required></textarea>
           </div>
 
           <div class="input-block">
             <label for="whatsapp">Número de whatsapp <span>(campo opcional)</span></label>
             <input id="whatsapp" name="whatsapp" />
+          </div>
+
+          <div class="input-block">
+            <label for="instagram">Instagram <span>(campo opcional)</span></label>
+            <input class="ig" id="instagram" name="instagram" placeholder="ig_do_lugar (sem @)" />
           </div>
 
           <div class="input-block images">
@@ -92,13 +98,14 @@
           <legend>Informações adicionais</legend>
 
           <div class="input-block">
-            <label for="instructions">Descrição (do lugar ou da tua experiência lá)</label>
-            <textarea id="instructions" name="instructions" required></textarea>
+            <label for="instructions">Descrição </label>
+            <textarea id="instructions" name="instructions"
+              placeholder="Fala um pouco do lugar ou da tua experiência lá" required></textarea>
           </div>
 
           <div class="input-block">
             <label for="opening_hours">Horários de funcionamento</label>
-            <input id="opening_hours" name="opening_hours" required />
+            <input id="opening_hours" name="opening_hours" placeholder="Dias, horários" required />
           </div>
 
           <div class="input-block">

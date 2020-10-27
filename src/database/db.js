@@ -12,6 +12,7 @@ function execute(db) {
     name TEXT,
     about TEXT,
     whatsapp TEXT,
+    instagram TEXT,
     images TEXT,
     instructions TEXT,
     opening_hours TEXT,

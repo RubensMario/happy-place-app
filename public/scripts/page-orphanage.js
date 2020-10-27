@@ -1,19 +1,9 @@
-const options = {
-  dragging: false,
-  touchZoom: false,
-  doubleClickZoom: false,
-  scrollWheelZoom: false,
-  zoomControl: false,
-};
-
 // Obter valores a partir do HTML
 const lat = document.querySelector('span[data-lat]').dataset.lat;
 const lng = document.querySelector('span[data-lng]').dataset.lng;
 
 // Add map
-/* Longitude e latitude de Maceió (para mostrar regiões com orfanatos):
--9.5985924,-35.7592344 */
-const map = L.map('mapid', options).setView([lat, lng], 12.4);
+const map = L.map('mapid').setView([lat, lng], 15);
 
 // Add imagem do mapa
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);

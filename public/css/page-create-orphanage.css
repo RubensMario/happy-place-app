@@ -19,3 +19,7 @@ main {
   background-color: #f5f8fa;
   border-radius: 0 0 20px 20px;
 }
+
+::-webkit-input-placeholder {
+  color: rgb(184, 181, 181);
+}
