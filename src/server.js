@@ -27,4 +27,7 @@ server.get('/get-orphanages', pages.getOrphanages);
 
 const port = process.env.PORT || 5500;
 
+// Produção
 server.listen(port, '0.0.0.0');
+// Local
+// server.listen(port);

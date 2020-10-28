@@ -8,11 +8,19 @@
 aside {
   width: clamp(24rem, 25vw, 44rem);
   background: linear-gradient(329.54deg, #6c5ce7 0%, #a29bfe 100%);
+
   padding: clamp(3rem, 5vw, 8rem);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+/* Barra lateral para celular */
+@media (max-width: 760px) {
+  aside {
+    width: clamp(14rem, 15vw, 34rem);
+  }
 }
 
 aside h2 {
