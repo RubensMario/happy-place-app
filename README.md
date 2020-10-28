@@ -1,5 +1,5 @@
 # Happy-place-app
-An app to register LGBTQIA+ friendly places in Maceió, indicating their locations in a map and showing some informations about the place.
+An app to register LGBTQIA+ friendly places in Maceió, indicating their locations in a map and showing some informations about the place. The project uses a mobile first concept, so the app is responsible and works well on mobile devices.
 
 ## Tecnologies
 - JavaScript
